@@ -1,6 +1,10 @@
-# Jekyll Doc Theme
+# Cryptocurrency and AI Society Website
 
-Go to [the website](https://aksakalli.github.io/jekyll-doc-theme/) for detailed information and demo.
+If you want to write an article or publish a post, simply make a pull request and the CryptoSoc team will see it immediately. Get involved and make improvements.
+
+View [the website](https://cryptosoc.github.io/)
+
+We are a society at the University of Cape Town, South Africa.
 
 ## Running locally
 
@@ -11,8 +15,8 @@ You need Ruby and gem before starting, then:
 gem install bundler
 
 # clone the project
-git clone https://github.com/aksakalli/jekyll-doc-theme.git
-cd jekyll-doc-theme
+git clone https://github.com/CryptoSoc/website.git
+cd website
 
 # run jekyll with dependencies
 bundle exec jekyll serve
