@@ -42,15 +42,22 @@ body {
 
 .header-container {
   background-color: black;
-  background: url('../img/bg.jpg') no-repeat 50% 0;
+  background: url('../img/bg.jpg') no-repeat center center;
   color: #fff;
 
   h1 {
     color: #fff;
+    font-size: 64px;
+    text-align: center;
+  }
+
+  h3 {
+    color: #fff;
+    text-align: center;
   }
   // background-attachment: fixed;
   background-size: cover;
-  background-position: center 36%;
+  // background-position: center 36%;
   margin-top: -37px;
 }
 .navbar-container {
