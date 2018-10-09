@@ -9,6 +9,7 @@ url: https://cryptosoc.github.io # the base hostname & protocol for your site
 git_address: https://github.com/CryptoSoc
 git_edit_address: https://github.com/CryptoSoc/website/blob/gh-pages
 facebook_page: https://www.facebook.com/UCTCryptoSoc
+calendar: https://calendar.google.com/calendar?cid=Nm1oOHBlcnIwaGN0dHF1dGVyZnFrczdhc2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
 
 # theme options from https://bootswatch.com/
 # comment out this to use default Bootstrap
