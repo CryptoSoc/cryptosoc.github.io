@@ -1,5 +1,6 @@
 ---
 title: How to Create your own DApp on Ethereum
+author: Thomas Tumiel
 layout: tutorials
 ---
 
