@@ -1,6 +1,6 @@
 # Site settings
 title: Cryptocurrency and Artificial Intelligence Society
-email: your-email@domain.com
+email: cryptosoc@uct.ac.za
 description: >
    High impact, practical education in the most radical technological advances of our age - AI and Blockchain.
 
@@ -48,10 +48,20 @@ defaults:
     seo:
       type: "WebPage"
 
+- scope:
+    path: _tutorials
+    type: docs
+  values:
+    layout: tutorials
+    sectionid: tutorials
+
 collections:
   docs:
     permalink: /:collection/:path/
     output: true
   posts:
     permalink: /blog/:year/:month/:day/:title/
+    output: true
+  tutorials:
+    permalink: /tutorials/:name/
     output: true
