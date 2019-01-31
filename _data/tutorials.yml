@@ -1,7 +1,17 @@
+- title: General Intro
+  tutorials:
+  - intro-to-git
+  - intro-to-github
+  - setting-up
+
 - title: Blockchain
   tutorials:
+  - intro-bitcoin
+  - intro-ethereum
+  - smart-contracts
   - make-a-dapp
 
 - title: Artificial Intelligence
   tutorials:
+  - neural-nets
   - pytorch-basics
