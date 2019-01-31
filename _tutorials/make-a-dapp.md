@@ -4,6 +4,13 @@ author: Thomas Tumiel
 layout: tutorials
 ---
 
+<div class="alert alert-block alert-info">
+<h5>Why is this Important:</h5>
+Getting involved is the best way to retain all that you've learned. Start with this guide to build a DApp of your own.
+<br />
+<strong>Time to read: 1 hour</strong>
+</div>
+
 [See the repo here.](https://github.com/CryptoSoc/truffle-workshop)
 
 In this workshop we will be taking a quick look at building a DApp, and then we will let you take over and build one yourself.
