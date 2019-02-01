@@ -8,6 +8,8 @@ layout: tutorials
 <h5>Why is this Important:</h5>
 GitHub is a platform that allows you to share your Git repositories. It provides a central hub for others to
 download copies of your code and make contributions to it.
+<br />
+<strong>Time to read: 20 minutes</strong>
 </div>
 
  After [learning the basics of Git](), you might be wondering what the point of it is. Well version control starts to make more sense when you begin working on large projects with multiple people. GitHub is just one place where you can store git repositories for free so others can access them and contribute to your projects.
@@ -20,7 +22,7 @@ Go ahead and [sign up for a GitHub account](https://github.com/) if you don't ha
 
 In the top right corner, you should see a `+` icon. Click that and then select "New repository".
 
-![Add a new repo]()
+![Add a new repo](/img/tutorials/intro-github/new-repo.png){:class="img-responsive"}
 
 Here you can give your repository a name. It's common to name your repository the same as the name of your project, in lower case and separated by hyphens. For now, you can call yours `first-repo`. Additionally, you can configure some other things like a description, setting the repo to private or initializing it with some files. For now we'll ignore these.
 
@@ -28,11 +30,7 @@ Here you can give your repository a name. It's common to name your repository th
 
 ## Adding Files to Your Repo
 
-You should be greeted with a bare repository like this:
-
-![Empty repo]()
-
-This gives you some instructions on how to add things to your repo but most of it will look like another language for now so don't worry about it.
+You should be greeted with a bare repository which gives you some instructions on how to add things to your repo but most of it will look like another language for now so don't worry about it.
 
 In the previous tutorial, we created a git repo on our local machine. Now head to that directory. It should look like this:
 
@@ -41,7 +39,7 @@ first-git-repo/
 └── file.txt
 ```
 
-Now we will push the local files on our computer to the git repository. First you need to tell Git where to push your files to. In Git lingo, this is called a `remote`. First grab your remote url from your repo:
+Now we will push the local files on our computer to the git repository. First you need to tell Git where to push your files to. In Git lingo, this is called a `remote`. First grab your remote url from your repo under the "Quick Setup" Heading:
 
 ![Repo URL]()
 
@@ -59,7 +57,7 @@ git push origin master
 
 The command `git push` tells git to push the local files and changes to your remote repository on GitHub. The `origin` option tells Git which remote to push to. If you look at the previous command, you'll see that we called our repo `origin`. The `master` option is known as a branch - this gets a bit more technical but the gist is that a branch can contain different versions of the same thing.
 
-If you refresh your GitHub repo, you should see you `file.txt` in it.
+If you refresh your GitHub repo, you should see your `file.txt` in it.
 
 ## Contributing to Other Repos
 
@@ -108,11 +106,13 @@ Great, we've made a change the the repo and updated it on your profile. But to c
 
 ![New pr]()
 
-Now make sure we are merging our changes with theirs:
+Now make sure we are merging our changes with theirs by making sure the CryptoSoc repo is the "base" and ours is the head:
 
 ![Merge]()
 
-Once you click "Make Pull Request" at the bottom, you should be greeted with this screen. Here you can comment on the changes you've made and discuss with the author why you made them. In this case, one of the CryptoSoc team will merge your pull request soon. Hang tight!
+Once you click "Create Pull Request" you can add a comment describing your change and click "create pull request" again, you should be greeted with this screen. Here you can comment on the changes you've made and discuss with the author why you made them. In this case, one of the CryptoSoc team will merge your pull request soon. Hang tight!
+
+![PR screen]()
 
 ## Conclusion
 
