@@ -22,7 +22,7 @@ Start by [downloading Git](https://git-scm.com/).
 
 ## Make a Git Repository
 
-Lets start by making a directory. Now open a terminal window (if you're on Linux or Mac) or open Git Bash in that directory by right clicking and selecting `Open terminal` or `Open Git Bash`.
+Lets start by making a directory with our project name. For now let's call it `first-git-repo`. Now open a terminal window (if you're on Linux or Mac) or open Git Bash in that directory by right clicking and selecting `Open terminal` or `Open Git Bash`.
 
 Now type the command `git init`.
 
