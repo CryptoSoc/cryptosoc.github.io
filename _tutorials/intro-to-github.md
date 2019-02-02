@@ -26,7 +26,7 @@ In the top right corner, you should see a `+` icon. Click that and then select "
 
 Here you can give your repository a name. It's common to name your repository the same as the name of your project, in lower case and separated by hyphens. For now, you can call yours `first-repo`. Additionally, you can configure some other things like a description, setting the repo to private or initializing it with some files. For now we'll ignore these.
 
-![Configure repo]()
+![Configure repo](/img/tutorials/intro-github/conf-repo.png){:class="img-responsive"}
 
 ## Adding Files to Your Repo
 
@@ -41,7 +41,7 @@ first-git-repo/
 
 Now we will push the local files on our computer to the git repository. First you need to tell Git where to push your files to. In Git lingo, this is called a `remote`. First grab your remote url from your repo under the "Quick Setup" Heading:
 
-![Repo URL]()
+![Repo URL](/img/tutorials/intro-github/repo-url.png){:class="img-responsive"}
 
 Then add a the remote url to your git repository by typing the command below. Make sure that you change the url below to the url of your repo.
 
@@ -78,13 +78,13 @@ git push origin master
 
 To start working on someone elses repo you begin by "forking" it to your profile. Head to [this repo](https://github.com/CryptoSoc/hello-world) and click the "fork" button in the top right:
 
-![Fork repo]()
+![Fork repo](/img/tutorials/intro-github/fork-repo.png){:class="img-responsive"}
 
 Now you will see that GitHub has made a copy of the repo to your account. We will now "pull" that repo to your local computer so we can make changes to the files and then "push" them back to the remote repository.
 
 To download the repo click on the "download or clone" button and copy the link:
 
-![Clone Repo]()
+![Clone Repo](/img/tutorials/intro-github/clone-repo.png){:class="img-responsive"}
 
 Now in a new terminal, run:
 
@@ -100,19 +100,19 @@ git commit -m "Added my username"
 git push origin master
 ```
 
-## Make a Update to the Original Repo
+## Make an Update to the Original Repo
 
 Great, we've made a change the the repo and updated it on your profile. But to collaborate with others we want to let them know about all the great changes we've made. To ask the original repo owner to merge your changes with their repo you can make a pull request. On GitHub, go to your profile and click "New Pull Request":
 
-![New pr]()
+![New pr](/img/tutorials/intro-github/new-pr.png){:class="img-responsive"}
 
 Now make sure we are merging our changes with theirs by making sure the CryptoSoc repo is the "base" and ours is the head:
 
-![Merge]()
+![Merge](/img/tutorials/intro-github/merge.png){:class="img-responsive"}
 
 Once you click "Create Pull Request" you can add a comment describing your change and click "create pull request" again, you should be greeted with this screen. Here you can comment on the changes you've made and discuss with the author why you made them. In this case, one of the CryptoSoc team will merge your pull request soon. Hang tight!
 
-![PR screen]()
+![PR screen](/img/tutorials/intro-github/pr.png){:class="img-responsive"}
 
 ## Conclusion
 
