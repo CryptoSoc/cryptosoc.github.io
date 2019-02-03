@@ -8,6 +8,8 @@ layout: tutorials
 <h5>Why is this Important:</h5>
 Git is fundamental to collaborating on software. It allows teams to independently work
 on the same project and merge those changes together.
+<br />
+<strong>Time to read: 15 minutes</strong>
 </div>
 
 What is Git?
