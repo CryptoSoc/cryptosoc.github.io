@@ -12,7 +12,7 @@ download copies of your code and make contributions to it.
 <strong>Time to read: 20 minutes</strong>
 </div>
 
- After [learning the basics of Git](), you might be wondering what the point of it is. Well version control starts to make more sense when you begin working on large projects with multiple people. GitHub is just one place where you can store git repositories for free so others can access them and contribute to your projects.
+ After [learning the basics of Git](/tutorials/intro-to-git), you might be wondering what the point of it is. Well version control starts to make more sense when you begin working on large projects with multiple people. GitHub is just one place where you can store git repositories for free so others can access them and contribute to your projects.
 
 ## Sign Up
 
@@ -116,4 +116,4 @@ Once you click "Create Pull Request" you can add a comment describing your chang
 
 ## Conclusion
 
-And that's it! You've learnt git and made a contribution to someone elses repo using GitHub. Well done. In [the next tutorial]() we'll set up our development environment to better make use of these tools.
+And that's it! You've learnt git and made a contribution to someone elses repo using GitHub. Well done. In [the next tutorial](/tutorials/setting-up) we'll set up our development environment to better make use of these tools.

@@ -58,4 +58,4 @@ Now we have updated the changes to our file without needing to save it as `file-
 
 ## Collaboration
 
-If you've ever collaborated on a project over Google Docs then you will know how much easier that is than emailing the same document to everyone and wondering who has the latest version. Git allows this same workflow for much larger projects, whether its code or something else. Join us in the next section [Intro to GitHub]() to learn how to share your projects with others.
+If you've ever collaborated on a project over Google Docs then you will know how much easier that is than emailing the same document to everyone and wondering who has the latest version. Git allows this same workflow for much larger projects, whether its code or something else. Join us in the next section [Intro to GitHub](/tutorials/intro-to-github) to learn how to share your projects with others.
