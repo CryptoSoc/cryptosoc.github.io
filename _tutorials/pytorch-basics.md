@@ -4,6 +4,13 @@ author: Justin Johnson
 layout: tutorials
 ---
 
+<div class="alert alert-block alert-info">
+<h5>Why is this Important:</h5>
+PyTorch is a very useful machine learning package that computes gradients for you and executes code on GPUs. It is commonly used in academia to research and implement the latest architectures.
+<br />
+<strong>Time to read: 45 minutes</strong>
+</div>
+
 [This repository](https://github.com/Tom2718/pytorch-examples) introduces the fundamental concepts of
 [PyTorch](https://github.com/pytorch/pytorch)
 through self-contained examples. You can run the examples as individual files or in a Jupyter Notebook.
