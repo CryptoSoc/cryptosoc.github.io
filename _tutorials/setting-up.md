@@ -14,8 +14,8 @@ Setting up the tools to effectively code can take some time. Here we look at som
 Code development is as simple as opening a plain text editing program and writing code. There doesn't have to be anything fancy to it. However, often the use of additional tools improves workflow, code readability and code correctness. In this section we explore some of the tools commonly used in blockchain and machine learning development.
 
 If you'd rather just read one of the sections, you can jump to it here:
-[Blockchain Tools](#blockchain-tools)
-[Machine Learning Tools](#machine-learning-tools)
+- [Blockchain Tools](#blockchain-tools)
+- [Machine Learning Tools](#machine-learning-tools)
 
 ## General Tools
 
@@ -23,7 +23,7 @@ As mentioned before, writing code is as simple as opening up a plain text editor
 
 ### Editors
 
-There is a lot of conpetition amongst code editors - whether that is how simple or how integrated. And I won't say that any one of them is the best. The main thing, however, is to __pick one__ and get good at it. Know the shortcuts, know the tricks. And then it doesn't really matter which one you end up using. If you're not sure or don't feel like really investigating all of them, download [VS Code]() and move on.
+There is a lot of competition amongst code editors - whether that is how simple or how integrated. And I won't say that any one of them is the best. The main thing, however, is to __pick one__ and get good at it. Know the shortcuts, know the tricks. And then it doesn't really matter which one you end up using. If you're not sure or don't feel like really investigating all of them, download [VS Code]() and move on.
 
 Some recommendations:
 
