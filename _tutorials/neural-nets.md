@@ -57,8 +57,8 @@ __Why subtract the gradient:__ We subtract the gradient so that we can step down
 
 When we update the weights of our neural network by calculating the gradient of the parameters with respect to the loss, we say that we propagate backwards through the network.
 
-### Summary
+## Summary
 
 A neural network is function that transforms arbitrary inputs to outputs. The process of predicting from a given input is called forward propagation. To train a neural network, you use data that has a label so that you can calculate a loss between the predicted and true labels and then perform gradient descent to minimize this loss. The process of calculating gradients is called backwards propagation.
 
-In [the next tutorial](), we learn how to use a popular machine learning framework called [PyTorch]() to build and train neural networks.
+In [the next tutorial](), we explore how neural networks are designed and built to learn from the structural data that they are fed.
