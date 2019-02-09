@@ -6,12 +6,12 @@ layout: tutorials
 
 <div class="alert alert-block alert-info">
 <h5>Why is this Important:</h5>
-...
+Knowing how a neural network is built with some mathematical background will put you in good stead to start building your own networks.
 <br />
 <strong>Time to read: 15 minutes</strong>
 </div>
 
-In [the previous tutorial](), we learnt how a neural network works on a high level. In particular, we said that a neural network is a function like the function $y=ax+b$ that transforms some input $x$ into some output $y$. However, neural networks don't simply have a linear representation, they represent complex functions that compute arbitrary relationships. In this tutorial we will see how this works.
+In [the previous tutorial](/tutorials/neural-nets), we learnt how a neural network works on a high level. In particular, we said that a neural network is a function like the function $y=ax+b$ that transforms some input $x$ into some output $y$. However, neural networks don't simply have a linear representation, they represent complex functions that compute arbitrary relationships. In this tutorial we will see how this works.
 
 ## Brief Refresh of Linear Algebra
 
@@ -75,9 +75,9 @@ print("Shape:", matmul1.shape, matmul2.shape, matmul3.shape)
 
 ## Neural Networks
 
-When we have a neural network, we usually have not just a single input $x$. Furthermore, our parameters $a$ and $b$ can be also much larger than a single parameter. In fact, they are usually matrices that are multiplied with the input to get the output.
+When we have a neural network, we usually have not just a single input $x$. Furthermore, our parameters $a$ and $b$ can be also much larger than a single parameter. In fact, they are usually matrices that are multiplied with a vector input to get the output.
 
-Lets change notation a bit: instead of a function $y = ax+b$, we will now have a function $y = Wx + b$. Matrices are commonly represented by capital letters and thus our parameter $W$ is now a matrix. This matrix is called a weight matrix. Similarly, $x$ and $b$ are now vectors so that they can be multiplied and added to the weight matrix respectively. The shape of the vector $y$ can be inferred by the shape of $W$  - we can have a prediction for a single label or for many labels.
+Lets change notation a bit: instead of a function $y = ax+b$, we will now have a function $y = Wx + b$. Matrices are commonly represented by capital letters and thus our parameter $W$ is now a matrix. This matrix is called a weight matrix. Similarly, $x$ and $b$ are now vectors so that they can be multiplied and added to the weight matrix respectively. The vector $b$ is called the bias as it moves the linearity up and down on the y axis. The shape of the vector $y$ can be inferred by the shape of $W$ - we can have a prediction for a single label or for many labels.
 
 ```python
 W = np.random.randn(10,2)
@@ -89,7 +89,7 @@ print(y.shape)
 # (2,)
 ```
 
-However, the function $y = Wx + b$ is a linear function and thus cannot generalise to arbitrary functions - we want something more powerful. What we do to vary the function in a non-linear way is apply some sort of non-linearity function. These functions can have various shapes but one of the most popular is the Rectified Linear Unit (ReLU) function. It takes its input and makes all negative numbers 0 while leaving positive numbers alone. It looks like this:
+However, the function $y = Wx + b$ is a linear function and thus cannot generalise to arbitrary functions - we want something more powerful. What we do to vary the function in a non-linear way is apply some sort of non-linearity function, which are also called activation functions. These functions can have various shapes but one of the most popular is the Rectified Linear Unit (ReLU) function. It takes its input and makes all negative numbers 0 while leaving positive numbers alone. It looks like this:
 
 ![ReLU Graph]()
 
@@ -101,6 +101,19 @@ relu_out = np.maximum(x, 0) # take the maximum between x and 0
 
 Furthermore, we want to use many layers of computation in order to calculate complex dependencies in our data. This leads us to deep neural networks. Also it's important to note that without the ReLU non-linearity, any cascaded linear layers would combine resulting in the effect of a single linear layer because of linearity. Now we can cascade linear layers and ReLU activation functions in this manner: `Linear -> ReLU -> Linear -> ReLU -> Linear -> Output`. The lack of a ReLU after the last linear layer is because the outputs of the last layer are our predictions and we don't want to arbitrarily mess with them.
 
+This basic pattern leads to the image you'll see whenever someone talks about a neural network:
 
+![Basic neural net arch]()
 
-In [the next tutorial](), we learn how to use a popular machine learning framework called [PyTorch]() to build and train neural networks.
+The lines represent the weights and the circles represent the activation functions. You can see that we can combine many of these layers together to create deep networks. Finally you can also see how the input and output can be any shape.
+
+<div class="alert alert-block alert-info">
+<h5>Further Reading</h5>
+For more in depth explanations, see:
+<ul>
+<li><a href="">The Deep Learning Book</a>, in particular, chapter XXXX.</li>
+<li><a href="">CS231n Course Notes</a></li>
+</ul>
+</div>
+
+In [the next tutorial](/tutorials/pytorch-basics), we learn how to use a popular machine learning framework called [PyTorch]() to build and train neural networks.
