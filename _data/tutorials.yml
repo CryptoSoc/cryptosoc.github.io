@@ -14,4 +14,5 @@
 - title: Artificial Intelligence Sequence
   tutorials:
   - neural-nets
+  - neural-nets-2
   - pytorch-basics
