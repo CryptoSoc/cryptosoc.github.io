@@ -15,7 +15,7 @@ Neural networks may seem like a black box to the uninitiated. In this tutorial, 
 
 ## Introduction
 
-A neural network is a mathematical function: it takes an input and generates an output. You might be used to simpler functions such as $y=ax+b$, a straight line, that converts an input $x$ to an output $y$. Very similarly, neural networks transform their input into an output.
+A neural network is a mathematical function: it takes an input and generates an output. You might be used to simpler functions such as \\(y=ax+b\\), a straight line, that converts an input \\(x\\) to an output \\(y\\). Very similarly, neural networks transform their input into an output.
 
 ## Forward Propagation
 
@@ -49,9 +49,9 @@ A gradient is similar to a derivative except that it accounts for the slope in m
 
 #### Gradient Descent
 
-Remembering our $y=ax+b$ example, we could try adjust $a$ and $b$ up and down to see if they affect the loss and for this small example that would take 4 tries. However for a big neural network with many of those parameters, we would have to do this millions of times.
+Remembering our \\(y=ax+b\\) example, we could try adjust \\(a\\) and \\(b\\) up and down to see if they affect the loss and for this small example that would take 4 tries. However for a big neural network with many of those parameters, we would have to do this millions of times.
 
-Now that we know that we can use the gradient to determine which direction to move, we can update our parameters incrementally so that we do end up minimizing the loss. This is called gradient descent. Now we can update our parameters by subtracting our gradient from them in order to step downwards towards our minimal loss. That is, __we change $a$ and $b$ so that $y$ is now closer to 1 and thus predicts "cat" for the cat image__.
+Now that we know that we can use the gradient to determine which direction to move, we can update our parameters incrementally so that we do end up minimizing the loss. This is called gradient descent. Now we can update our parameters by subtracting our gradient from them in order to step downwards towards our minimal loss. That is, __we change \\(a\\) and \\(b\\) so that \\(y\\) is now closer to 1 and thus predicts "cat" for the cat image__.
 
 __Why subtract the gradient:__ We subtract the gradient so that we can step downhill towards a minimum rather than stepping uphill. Remember, we want to minimize the loss of our predicted and actual labels.
 

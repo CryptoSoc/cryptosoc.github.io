@@ -11,7 +11,7 @@ Knowing how a neural network is built with some mathematical background will put
 <strong>Time to read: 15 minutes</strong>
 </div>
 
-In [the previous tutorial](/tutorials/neural-nets), we learnt how a neural network works on a high level. In particular, we said that a neural network is a function like the function $y=ax+b$ that transforms some input $x$ into some output $y$. However, neural networks don't simply have a linear representation, they represent complex functions that compute arbitrary relationships. In this tutorial we will see how this works.
+In [the previous tutorial](/tutorials/neural-nets), we learnt how a neural network works on a high level. In particular, we said that a neural network is a function like the function \\(y=ax+b\\) that transforms some input \\(x\\) into some output \\(y\\). However, neural networks don't simply have a linear representation, they represent complex functions that compute arbitrary relationships. In this tutorial we will see how this works.
 
 ## Brief Refresh of Linear Algebra
 
@@ -75,9 +75,9 @@ print("Shape:", matmul1.shape, matmul2.shape, matmul3.shape)
 
 ## Neural Networks
 
-When we have a neural network, we usually have not just a single input $x$. Furthermore, our parameters $a$ and $b$ can be also much larger than a single parameter. In fact, they are usually matrices that are multiplied with a vector input to get the output.
+When we have a neural network, we usually have not just a single input \\(x\\). Furthermore, our parameters \\(a\\) and \\(b\\) can be also much larger than a single parameter. In fact, they are usually matrices that are multiplied with a vector input to get the output.
 
-Lets change notation a bit: instead of a function $y = ax+b$, we will now have a function $y = Wx + b$. Matrices are commonly represented by capital letters and thus our parameter $W$ is now a matrix. This matrix is called a weight matrix. Similarly, $x$ and $b$ are now vectors so that they can be multiplied and added to the weight matrix respectively. The vector $b$ is called the bias as it moves the linearity up and down on the y axis. The shape of the vector $y$ can be inferred by the shape of $W$ - we can have a prediction for a single label or for many labels.
+Lets change notation a bit: instead of a function \\(y = ax+b\\), we will now have a function \\(y = Wx + b\\). Matrices are commonly represented by capital letters and thus our parameter \\(W\\) is now a matrix. This matrix is called a weight matrix. Similarly, \\(x\\) and \\(b\\) are now vectors so that they can be multiplied and added to the weight matrix respectively. The vector \\(b\\) is called the bias as it moves the linearity up and down on the y axis. The shape of the vector \\(y\\) can be inferred by the shape of \\(W\\) - we can have a prediction for a single label or for many labels.
 
 ```python
 W = np.random.randn(10,2)
@@ -89,7 +89,7 @@ print(y.shape)
 # (2,)
 ```
 
-However, the function $y = Wx + b$ is a linear function and thus cannot generalise to arbitrary functions - we want something more powerful. What we do to vary the function in a non-linear way is apply some sort of non-linearity function, which are also called activation functions. These functions can have various shapes but one of the most popular is the Rectified Linear Unit (ReLU) function. It takes its input and makes all negative numbers 0 while leaving positive numbers alone. It looks like this:
+However, the function \\(y = Wx + b\\) is a linear function and thus cannot generalise to arbitrary functions - we want something more powerful. What we do to vary the function in a non-linear way is apply some sort of non-linearity function, which are also called activation functions. These functions can have various shapes but one of the most popular is the Rectified Linear Unit (ReLU) function. It takes its input and makes all negative numbers 0 while leaving positive numbers alone. It looks like this:
 
 ![ReLU Graph]()
 
@@ -107,6 +107,8 @@ This basic pattern leads to the image you'll see whenever someone talks about a 
 
 The lines represent the weights and the circles represent the activation functions. You can see that we can combine many of these layers together to create deep networks. Finally you can also see how the input and output can be any shape.
 
+In [the next tutorial](/tutorials/pytorch-basics), we learn how to use a popular machine learning framework called [PyTorch](https://pytorch.org/) to build and train neural networks.
+
 <div class="alert alert-block alert-info">
 <h5>Further Reading</h5>
 For more in depth explanations, see:
@@ -117,5 +119,3 @@ For more in depth explanations, see:
 <li><a href="https://developers.google.com/machine-learning/crash-course/">Google's Machine Learning Crash Course</a></li>
 </ul>
 </div>
-
-In [the next tutorial](/tutorials/pytorch-basics), we learn how to use a popular machine learning framework called [PyTorch](https://pytorch.org/) to build and train neural networks.
