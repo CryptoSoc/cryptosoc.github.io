@@ -36,8 +36,8 @@ Now create an empty text file in that directory called `file.txt`. We will now c
 
 Lets break down what these commands do:
 
-- `git add`: this command tells git to add the following file to a "staging area". This staging area simply allows you to separate the files you want to save to the repo and ones that you don't.
-- `git commit`: this command tells git to save or "commit" the file to the repository. The `-m` allows the user to add a message to the save. In this case we added the message "Adding a file".
+- `git add`: this command tells Git to add the following file to a "staging area". This staging area simply allows you to separate the files you want to save to the repo and ones that you don't.
+- `git commit`: this command tells Git to save or "commit" the file to the repository. The `-m` allows the user to add a message to the save. In this case we added the message "Adding a file".
 
 ## Make a Change
 

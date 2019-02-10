@@ -12,7 +12,7 @@ download copies of your code and make contributions to it.
 <strong>Time to read: 20 minutes</strong>
 </div>
 
- After [learning the basics of Git](/tutorials/intro-to-git), you might be wondering what the point of it is. Well version control starts to make more sense when you begin working on large projects with multiple people. GitHub is just one place where you can store git repositories for free so others can access them and contribute to your projects.
+ After [learning the basics of Git](/tutorials/intro-to-git), you might be wondering what the point of it is. Well version control starts to make more sense when you begin working on large projects with multiple people. GitHub is just one place where you can store Git repositories for free so others can access them and contribute to your projects.
 
 ## Sign Up
 
@@ -32,18 +32,18 @@ Here you can give your repository a name. It's common to name your repository th
 
 You should be greeted with a bare repository which gives you some instructions on how to add things to your repo but most of it will look like another language for now so don't worry about it.
 
-In the previous tutorial, we created a git repo on our local machine. Now head to that directory. It should look like this:
+In the previous tutorial, we created a Git repo on our local machine. Now head to that directory. It should look like this:
 
 ```
 first-git-repo/
 └── file.txt
 ```
 
-Now we will push the local files on our computer to the git repository. First you need to tell Git where to push your files to. In Git lingo, this is called a `remote`. First grab your remote url from your repo under the "Quick Setup" Heading:
+Now we will push the local files on our computer to the Git repository. First you need to tell Git where to push your files to. In Git lingo, this is called a `remote`. First grab your remote url from your repo under the "Quick Setup" Heading:
 
 ![Repo URL](/img/tutorials/intro-github/repo-url.png){:class="img-responsive"}
 
-Then add a the remote url to your git repository by typing the command below. Make sure that you change the url below to the url of your repo.
+Then add a the remote url to your Git repository by typing the command below. Make sure that you change the url below to the url of your repo.
 
 ```bash
 git remote origin add https://github.com/YOUR-USERNAME/first-repo.git
@@ -55,7 +55,7 @@ Now we can push our files to our repo. Simply type:
 git push origin master
 ```
 
-The command `git push` tells git to push the local files and changes to your remote repository on GitHub. The `origin` option tells Git which remote to push to. If you look at the previous command, you'll see that we called our repo `origin`. The `master` option is known as a branch - this gets a bit more technical but the gist is that a branch can contain different versions of the same thing.
+The command `git push` tells Git to push the local files and changes to your remote repository on GitHub. The `origin` option tells Git which remote to push to. If you look at the previous command, you'll see that we called our repo `origin`. The `master` option is known as a branch - this gets a bit more technical but the gist is that a branch can contain different versions of the same thing.
 
 If you refresh your GitHub repo, you should see your `file.txt` in it.
 
@@ -66,10 +66,10 @@ Great work! You've now learned how to push changes to your GitHub repo. As a sho
 ```bash
 # Make changes to files (for example file.txt)
 
-# Stage to git
+# Stage to Git
 git add file.txt
 
-# Commit to git
+# Commit to Git
 git commit -m "A message about the commit"
 
 # Push to GitHub
@@ -92,7 +92,7 @@ Now in a new terminal, run:
 git clone https://github.com/YOUR-USERNAME/hello-world.git
 ```
 
-`git clone` simply downloads the files to your machine using git. Now change into the newly created `hello-world` directory. Inside you should see a file called `README.md`. Open this file. You can add your own username to the bottom of the list. Once you've done that, go through the process of committing and pushing your changes:
+`git clone` simply downloads the files to your machine using Git. Now change into the newly created `hello-world` directory. Inside you should see a file called `README.md`. Open this file. You can add your own username to the bottom of the list. Once you've done that, go through the process of committing and pushing your changes:
 
 ```bash
 git add README.md
@@ -116,4 +116,4 @@ Once you click "Create Pull Request" you can add a comment describing your chang
 
 ## Conclusion
 
-And that's it! You've learnt git and made a contribution to someone elses repo using GitHub. Well done. In [the next tutorial](/tutorials/setting-up) we'll set up our development environment to better make use of these tools.
+And that's it! You've learnt Git and made a contribution to someone elses repo using GitHub. Well done. In [the next tutorial](/tutorials/setting-up) we'll set up our development environment to better make use of these tools.
