@@ -24,17 +24,11 @@ will have a single hidden layer, and will be trained with gradient descent to
 fit random data by minimizing the Euclidean distance between the network output
 and the true output.
 
-**NOTE:** These examples have been updated for PyTorch 0.4 and verified for PyTorch 1.0. PyTorch 0.4 made several
-major changes to the core PyTorch API. Most notably, prior to 0.4 Tensors had
-to be wrapped in Variable objects to use autograd; this functionality has now
-been added directly to Tensors, and Variables are now deprecated.
-
 ### Table of Contents
 - <a href='#warm-up-numpy'>Warm-up: numpy</a>
 - <a href='#pytorch-tensors'>PyTorch: Tensors</a>
 - <a href='#pytorch-autograd'>PyTorch: Autograd</a>
 - <a href='#pytorch-defining-new-autograd-functions'>PyTorch: Defining new autograd functions</a>
-- <a href='#tensorflow-static-graphs'>TensorFlow: Static Graphs</a>
 - <a href='#pytorch-nn'>PyTorch: nn</a>
 - <a href='#pytorch-optim'>PyTorch: optim</a>
 - <a href='#pytorch-custom-nn-modules'>PyTorch: Custom nn Modules</a>
@@ -333,100 +327,6 @@ for t in range(500):
 
 ```
 
-## TensorFlow: Static Graphs
-PyTorch autograd looks a lot like TensorFlow: in both frameworks we define
-a computational graph, and use automatic differentiation to compute gradients.
-The biggest difference between the two is that TensorFlow's computational graphs
-are **static** and PyTorch uses **dynamic** computational graphs.
-
-In TensorFlow, we define the computational graph once and then execute the same
-graph over and over again, possibly feeding different input data to the graph.
-In PyTorch, each forward pass defines a new computational graph.
-
-Static graphs are nice because you can optimize the graph up front; for example
-a framework might decide to fuse some graph operations for efficiency, or to
-come up with a strategy for distributing the graph across many GPUs or many
-machines. If you are reusing the same graph over and over, then this potentially
-costly up-front optimization can be amortized as the same graph is rerun over
-and over.
-
-One aspect where static and dynamic graphs differ is control flow. For some models
-we may wish to perform different computation for each data point; for example a
-recurrent network might be unrolled for different numbers of time steps for each
-data point; this unrolling can be implemented as a loop. With a static graph the
-loop construct needs to be a part of the graph; for this reason TensorFlow
-provides operators such as `tf.scan` for embedding loops into the graph. With
-dynamic graphs the situation is simpler: since we build graphs on-the-fly for
-each example, we can use normal imperative flow control to perform computation
-that differs for each input.
-
-To contrast with the PyTorch autograd example above, here we use TensorFlow to
-fit a simple two-layer net:
-
-```python
-# Code in file autograd/tf_two_layer_net.py
-import tensorflow as tf
-import numpy as np
-
-# First we set up the computational graph:
-
-# N is batch size; D_in is input dimension;
-# H is hidden dimension; D_out is output dimension.
-N, D_in, H, D_out = 64, 1000, 100, 10
-
-# Create placeholders for the input and target data; these will be filled
-# with real data when we execute the graph.
-x = tf.placeholder(tf.float32, shape=(None, D_in))
-y = tf.placeholder(tf.float32, shape=(None, D_out))
-
-# Create Variables for the weights and initialize them with random data.
-# A TensorFlow Variable persists its value across executions of the graph.
-w1 = tf.Variable(tf.random_normal((D_in, H)))
-w2 = tf.Variable(tf.random_normal((H, D_out)))
-
-# Forward pass: Compute the predicted y using operations on TensorFlow Tensors.
-# Note that this code does not actually perform any numeric operations; it
-# merely sets up the computational graph that we will later execute.
-h = tf.matmul(x, w1)
-h_relu = tf.maximum(h, tf.zeros(1))
-y_pred = tf.matmul(h_relu, w2)
-
-# Compute loss using operations on TensorFlow Tensors
-loss = tf.reduce_sum((y - y_pred) ** 2.0)
-
-# Compute gradient of the loss with respect to w1 and w2.
-grad_w1, grad_w2 = tf.gradients(loss, [w1, w2])
-
-# Update the weights using gradient descent. To actually update the weights
-# we need to evaluate new_w1 and new_w2 when executing the graph. Note that
-# in TensorFlow the the act of updating the value of the weights is part of
-# the computational graph; in PyTorch this happens outside the computational
-# graph.
-learning_rate = 1e-6
-new_w1 = w1.assign(w1 - learning_rate * grad_w1)
-new_w2 = w2.assign(w2 - learning_rate * grad_w2)
-
-# Now we have built our computational graph, so we enter a TensorFlow session to
-# actually execute the graph.
-with tf.Session() as sess:
-  # Run the graph once to initialize the Variables w1 and w2.
-  sess.run(tf.global_variables_initializer())
-
-  # Create numpy arrays holding the actual data for the inputs x and targets y
-  x_value = np.random.randn(N, D_in)
-  y_value = np.random.randn(N, D_out)
-  for _ in range(500):
-    # Execute the graph many times. Each time it executes we want to bind
-    # x_value to x and y_value to y, specified with the feed_dict argument.
-    # Each time we execute the graph we want to compute the values for loss,
-    # new_w1, and new_w2; the values of these Tensors are returned as numpy
-    # arrays.
-    loss_value, _, _ = sess.run([loss, new_w1, new_w2],
-                                feed_dict={x: x_value, y: y_value})
-    print(loss_value)
-```
-
-
 ## PyTorch: nn
 Computational graphs and autograd are a very powerful paradigm for defining
 complex operators and automatically taking derivatives; however for large
@@ -436,12 +336,8 @@ When building neural networks we frequently think of arranging the computation
 into **layers**, some of which have **learnable parameters** which will be
 optimized during learning.
 
-In TensorFlow, packages like [Keras](https://github.com/fchollet/keras),
-[TensorFlow-Slim](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim),
-and [TFLearn](http://tflearn.org/) provide higher-level abstractions over
-raw computational graphs that are useful for building neural networks.
-
-In PyTorch, the `nn` package serves this same purpose. The `nn` package defines a set of
+In PyTorch, the `nn` package provides a high-level abstraction over the raw computational graph.
+The `nn` package defines a set of
 **Modules**, which are roughly equivalent to neural network layers. A Module receives
 input Tensors and computes output Tensors, but may also hold internal state such as
 Tensors containing learnable parameters. The `nn` package also defines a set of useful
@@ -518,7 +414,7 @@ for t in range(500):
 Up to this point we have updated the weights of our models by manually mutating
 Tensors holding learnable parameters. This is not a huge burden
 for simple optimization algorithms like stochastic gradient descent, but in practice
-we often train neural networks using more sophisiticated optimizers like AdaGrad,
+we often train neural networks using more sophisticated optimizers like AdaGrad,
 RMSProp, Adam, etc.
 
 The `optim` package in PyTorch abstracts the idea of an optimization algorithm and
