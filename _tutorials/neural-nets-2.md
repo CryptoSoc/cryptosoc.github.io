@@ -91,7 +91,7 @@ print(y.shape)
 
 However, the function \\(y = Wx + b\\) is a linear function and thus cannot generalise to arbitrary functions - we want something more powerful. What we do to vary the function in a non-linear way is apply some sort of non-linearity function, which are also called activation functions. These functions can have various shapes but one of the most popular is the Rectified Linear Unit (ReLU) function. It takes its input and makes all negative numbers 0 while leaving positive numbers alone. It looks like this:
 
-![ReLU Graph]()
+![ReLU Graph](/img/tutorials/neural-nets-2/relu-graph.png){:class="img-responsive"}
 
 A ReLU in code would look like this:
 
@@ -103,19 +103,21 @@ Furthermore, we want to use many layers of computation in order to calculate com
 
 This basic pattern leads to the image you'll see whenever someone talks about a neural network:
 
-![Basic neural net arch]()
+![Basic neural net arch](/img/tutorials/neural-nets-2/nn-arch.jpg){:class="img-responsive"}
+<small>Image from <a href="https://www.digitaltrends.com/cool-tech/what-is-an-artificial-neural-network/" target="_blank">here.</a></small>
+
 
 The lines represent the weights and the circles represent the activation functions. You can see that we can combine many of these layers together to create deep networks. Finally you can also see how the input and output can be any shape.
 
-In [the next tutorial](/tutorials/pytorch-basics), we learn how to use a popular machine learning framework called [PyTorch](https://pytorch.org/) to build and train neural networks.
-
 <div class="alert alert-block alert-info">
-<h5>Further Reading</h5>
-For more in depth explanations, see:
-<ul>
-<li><a href="https://www.deeplearningbook.org/">The Deep Learning Book</a>, in particular, chapter 2 (Linear Algebra) and 6 (Deep Feedforward Networks).</li>
-<li><a href="http://cs231n.github.io/neural-networks-1/">CS231n Course Notes</a></li>
-<li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">3Blue1Brown Neural Network YouTube Series</a></li>
-<li><a href="https://developers.google.com/machine-learning/crash-course/">Google's Machine Learning Crash Course</a></li>
-</ul>
+    <h5>Further Reading</h5>
+    For more in depth explanations, see:
+    <ul>
+        <li><a href="https://www.deeplearningbook.org/">The Deep Learning Book</a>, in particular, chapter 2 (Linear Algebra) and 6 (Deep Feedforward Networks).</li>
+        <li><a href="http://cs231n.github.io/neural-networks-1/">CS231n Course Notes</a></li>
+        <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">3Blue1Brown Neural Network YouTube Series</a></li>
+        <li><a href="https://developers.google.com/machine-learning/crash-course/">Google's Machine Learning Crash Course</a></li>
+    </ul>
 </div>
+
+In [the next tutorial](/tutorials/pytorch-basics), we learn how to use a popular machine learning framework called [PyTorch](https://pytorch.org/) to build and train neural networks.
