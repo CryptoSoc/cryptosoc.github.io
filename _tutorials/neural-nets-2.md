@@ -111,9 +111,11 @@ The lines represent the weights and the circles represent the activation functio
 <h5>Further Reading</h5>
 For more in depth explanations, see:
 <ul>
-<li><a href="">The Deep Learning Book</a>, in particular, chapter XXXX.</li>
-<li><a href="">CS231n Course Notes</a></li>
+<li><a href="https://www.deeplearningbook.org/">The Deep Learning Book</a>, in particular, chapter 2 (Linear Algebra) and 6 (Deep Feedforward Networks).</li>
+<li><a href="http://cs231n.github.io/neural-networks-1/">CS231n Course Notes</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">3Blue1Brown Neural Network YouTube Series</a></li>
+<li><a href="https://developers.google.com/machine-learning/crash-course/">Google's Machine Learning Crash Course</a></li>
 </ul>
 </div>
 
-In [the next tutorial](/tutorials/pytorch-basics), we learn how to use a popular machine learning framework called [PyTorch]() to build and train neural networks.
+In [the next tutorial](/tutorials/pytorch-basics), we learn how to use a popular machine learning framework called [PyTorch](https://pytorch.org/) to build and train neural networks.

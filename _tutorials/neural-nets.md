@@ -41,7 +41,7 @@ Now once we have the loss, we want to find out how to minimize it. This process 
 
 Optimization is the process of adjusting the neural network parameters in order to minimize the loss. Specifically, we want to iteratively improve our predictions that cats are in fact cats.
 
-[__Blindfolded hiker analogy:__]() One analogy that you may find helpful going forward is to think of yourself as hiking on a hilly terrain with a blindfold on, and trying to reach the bottom. You try to feel around you to judge which way is going down the most and move in that direction, constantly checking that you are still moving down.
+[__Blindfolded hiker analogy:__](http://cs231n.github.io/optimization-1/#opt1) One analogy that you may find helpful going forward is to think of yourself as hiking on a hilly terrain with a blindfold on, and trying to reach the bottom. You try to feel around you to judge which way is going down the most and move in that direction, constantly checking that you are still moving down.
 
 We can in fact compute the best direction to move using the gradient of the loss function with respect to the parameters - we can determine that a certain direction on the hill is the best way to move currently without knowing about the rest of the mountain range.
 
@@ -61,4 +61,4 @@ When we update the weights of our neural network by calculating the gradient of 
 
 A neural network is function that transforms arbitrary inputs to outputs. The process of predicting from a given input is called forward propagation. To train a neural network, you use data that has a label so that you can calculate a loss between the predicted and true labels and then perform gradient descent to minimize this loss. The process of calculating gradients is called backwards propagation.
 
-In [the next tutorial](), we explore how neural networks are designed and built to learn from the structural data that they are fed.
+In [the next tutorial](/tutorials/neural-nets-2), we explore how neural networks are designed and built to learn from the structural data that they are fed.
