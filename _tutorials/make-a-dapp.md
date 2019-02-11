@@ -36,7 +36,7 @@ There are a few technical requirements before we start. Please install the follo
 
 Once Ganache is downloaded, start your own local blockchain by simply opening it. You will see several Ethereum accounts with some test Ether that you will use to interact with your contracts.
 
-![](/img/ganache_initial.png)
+![](/img/tutorials/make-a-dapp/ganache-initial.png)
 
 Once we have those installed, we only need one command to install Truffle:
 
@@ -81,7 +81,7 @@ Make sure Metamask is configured to the Ganache network. [See how to here](#set-
 
 You should then be greeted with this:
 
-![App Landing Page](./img/app_landing.png)
+![App Landing Page](/img/tutorials/make-a-dapp/app_landing.png)
 
 
 ## Getting Started
@@ -169,17 +169,17 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
 1. Once installed, you'll see the MetaMask fox icon next to your address bar. Click the icon and you'll see this screen appear:
 
-   ![Privacy Notice](/img/metamask-privacy.png "Privacy Notice")
+   ![Privacy Notice](/img/tutorials/make-a-dapp/metamask-privacy.png "Privacy Notice")
 
 1. Click Accept to accept the Privacy Notice.
 
 1. Then you'll see the Terms of Use. Read them, scrolling to the bottom, and then click **Accept** there too.
 
-   ![Terms](/img/metamask-terms.png "Terms of Use")
+   ![Terms](/img/tutorials/make-a-dapp/metamask-terms.png "Terms of Use")
 
 1. Now you'll see the initial MetaMask screen. Click **Import Existing DEN**.
 
-   ![Initial screen](/img/metamask-initial.png "MetaMask initial screen")
+   ![Initial screen](/img/tutorials/make-a-dapp/metamask-initial.png "MetaMask initial screen")
 
 1. In the box marked **Wallet Seed**, enter the mnemonic that is displayed in Ganache.
 
@@ -189,15 +189,15 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    Enter a password below that and click **OK**.
 
-   ![MetaMask seed phrase](/img/metamask-seed.png "MetaMask seed phrase")
+   ![MetaMask seed phrase](/img/tutorials/make-a-dapp/metamask-seed.png "MetaMask seed phrase")
 
 1. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows "Main Network" and select **Custom RPC**.
 
-   ![MetaMask network menu](/img/metamask-networkmenu.png "MetaMask network menu")
+   ![MetaMask network menu](/img/tutorials/make-a-dapp/metamask-networkmenu.png "MetaMask network menu")
 
 1. In the box titled "New RPC URL" enter `http://127.0.0.1:7545` and click **Save**.
 
-   ![MetaMask Custom RPC](/img/metamask-customrpc.png "MetaMask Custom RPC")
+   ![MetaMask Custom RPC](/img/tutorials/make-a-dapp/metamask-customrpc.png "MetaMask Custom RPC")
 
    The network name at the top will switch to say "Private Network".
 
@@ -205,7 +205,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    Each account created by Ganache is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run.
 
-   ![MetaMask account configured](/img/metamask-account1.png "MetaMask account configured")
+   ![MetaMask account configured](/img/tutorials/make-a-dapp/metamask-account1.png "MetaMask account configured")
 
    Configuration is now complete.
 
@@ -252,23 +252,23 @@ In the `run` tab, change the environment to `Injected Web3`. Make sure you are c
 
 Click deploy like before, providing any constructor arguments your smart contract might have.
 
-![deploy to ropsten](./img/ropsten_tx.png)
+![deploy to ropsten](/img/tutorials/make-a-dapp/ropsten_tx.png)
 
 The transaction will then have to be mined. This can take a little while if the network is busy but will be done within a minute.
 
 Once that is done, you will find the same debug information in the console.
 
-![Debug information](./img/ropsten_debug_info.png)
+![Debug information](/img/tutorials/make-a-dapp/ropsten_debug_info.png)
 
 Additionally there is a link to view the transaction created on the Etherscan block explorer:
 
-![Ropsten Etherscan](./img/ropsten_etherscan.png)
+![Ropsten Etherscan](/img/tutorials/make-a-dapp/ropsten_etherscan.png)
 
 Before you continue, you should note down the address of your smart contract so that you don't lose it into the Ether...
 
 Now you can interact with your contract via the usual methods from Remix or any other wallet. For example, you could interact with the contract from [MyEtherWallet](https://www.myetherwallet.com/#contracts)
 
-![Interact MyEtherWallet](./img/interact_mew.png)
+![Interact MyEtherWallet](/img/tutorials/make-a-dapp/interact_mew.png)
 
 ### Deploying your Front End to Heroku
 
