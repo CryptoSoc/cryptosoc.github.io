@@ -20,7 +20,7 @@ Have you ever made a change to a file and saved it as `document-v2` and then mad
 
 But Git can be a bit confusing to a beginner - so don't get caught up with the various commands that you can use but rather start with the commands that you will use.
 
-Start by [downloading Git](https://git-scm.com/).
+Start by [downloading Git](https://git-scm.com/) and installing it if you are on Windows, otherwise it should already be installed. For the Windows users, simply accept all the default install options that Git selects - there are quite a few windows to click through and you can and should read through these to know how your Git is configured.
 
 ## Make a Git Repository
 
@@ -32,7 +32,7 @@ This command initialises a "Git repository" - a collection of code and other fil
 
 ## Make a File
 
-Now create an empty text file in that directory called `file.txt`. We will now commit this file to our Git repository using the commands `git add file.txt` and `git commit -m "Adding a file"`.
+Now create an empty text file in that directory called `file.txt`. We will now commit this file to our Git repository using the commands `git add file.txt` and `git commit -m "Adding a file"`. If this is the first time you've used Git then after you try `git commit` you might be confronted with an error asking who the current user is. Simply follow the error message instructions, filling in your details, and try commit again.
 
 Lets break down what these commands do:
 

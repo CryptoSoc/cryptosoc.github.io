@@ -43,10 +43,10 @@ Now we will push the local files on our computer to the Git repository. First yo
 
 ![Repo URL](/img/tutorials/intro-github/repo-url.png){:class="img-responsive"}
 
-Then add a the remote url to your Git repository by typing the command below. Make sure that you change the url below to the url of your repo.
+Then add the remote url to your Git repository by typing the command below. Make sure that you change the url below to the url of your repo.
 
 ```bash
-git remote origin add https://github.com/YOUR-USERNAME/first-repo.git
+git remote add origin https://github.com/YOUR-USERNAME/first-repo.git
 ```
 
 Now we can push our files to our repo. Simply type:
@@ -55,7 +55,9 @@ Now we can push our files to our repo. Simply type:
 git push origin master
 ```
 
-The command `git push` tells Git to push the local files and changes to your remote repository on GitHub. The `origin` option tells Git which remote to push to. If you look at the previous command, you'll see that we called our repo `origin`. The `master` option is known as a branch - this gets a bit more technical but the gist is that a branch can contain different versions of the same thing.
+Note: you will need to log in to GitHub here.
+
+The command `git push` tells Git to push the local files and changes to your remote repository on GitHub. The `origin` option tells Git which remote to push to. If you look at the previous command, you'll see that we called our repo `origin`. The `master` option is known as a branch - simply put, a branch can contain different versions of the same project.
 
 If you refresh your GitHub repo, you should see your `file.txt` in it.
 
