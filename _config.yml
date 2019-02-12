@@ -1,13 +1,13 @@
 # Site settings
 title: Cryptocurrency and Artificial Intelligence Society
-email: your-email@domain.com
+email: cryptosoc@uct.ac.za
 description: >
    High impact, practical education in the most radical technological advances of our age - AI and Blockchain.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: https://cryptosoc.github.io # the base hostname & protocol for your site
 git_address: https://github.com/CryptoSoc
-git_edit_address: https://github.com/CryptoSoc/website/blob/gh-pages
+git_edit_address: https://github.com/CryptoSoc/cryptosoc.github.io/blob/master
 facebook_page: https://www.facebook.com/UCTCryptoSoc
 calendar: https://calendar.google.com/calendar?cid=Nm1oOHBlcnIwaGN0dHF1dGVyZnFrczdhc2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
 
@@ -48,10 +48,20 @@ defaults:
     seo:
       type: "WebPage"
 
+- scope:
+    path: _tutorials
+    type: docs
+  values:
+    layout: tutorials
+    sectionid: tutorials
+
 collections:
   docs:
     permalink: /:collection/:path/
     output: true
   posts:
     permalink: /blog/:year/:month/:day/:title/
+    output: true
+  tutorials:
+    permalink: /tutorials/:name/
     output: true

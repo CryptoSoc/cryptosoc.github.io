@@ -1,0 +1,18 @@
+- title: Fundamentals Sequence
+  tutorials:
+  - intro-to-git
+  - intro-to-github
+  - setting-up
+
+- title: Blockchain Sequence
+  tutorials:
+  - intro-bitcoin
+  - intro-ethereum
+  - smart-contracts
+  - make-a-dapp
+
+- title: Artificial Intelligence Sequence
+  tutorials:
+  - neural-nets
+  - neural-nets-2
+  - pytorch-basics
