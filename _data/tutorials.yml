@@ -4,6 +4,10 @@
   - intro-to-github
   - setting-up
 
+- title: Blockchain Sequence
+  tutorials:
+  - make-a-dapp
+
 - title: Artificial Intelligence Sequence
   tutorials:
   - neural-nets
