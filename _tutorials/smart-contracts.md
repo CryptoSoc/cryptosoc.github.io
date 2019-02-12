@@ -10,3 +10,6 @@ layout: tutorials
 </div>
 
 This is a stub.
+
+- ethereum
+- decentralized, verifiable, immutable

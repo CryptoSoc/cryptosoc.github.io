@@ -10,3 +10,5 @@ layout: tutorials
 </div>
 
 This is a stub.
+
+- what is bitcoin

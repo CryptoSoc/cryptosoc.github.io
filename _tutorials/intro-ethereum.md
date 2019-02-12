@@ -10,3 +10,6 @@ layout: tutorials
 </div>
 
 This is a stub.
+
+- what is ethereum
+- what can you do with it
