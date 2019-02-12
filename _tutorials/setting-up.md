@@ -27,20 +27,17 @@ There is a lot of competition amongst code editors - whether that is how simple 
 
 Some recommendations:
 
-- [VS Code]():
-- [Atom]():
-- [Vim]():
-- [Sublime]():
-- [PyCharm]():
+- [VS Code](https://code.visualstudio.com/)
+- [Atom](https://atom.io/)
+- [Vim](https://www.vim.org/)
+- [Sublime](https://www.sublimetext.com/)
+- [PyCharm](https://www.jetbrains.com/pycharm/)
 
 ### Version Control
 
-If you went through our [previous Git tutorial]() you'll see that we don't even mention that there are other version control software. It's recommended to stick with Git for now.
+If you went through our [previous Git tutorial](/tutorials/intro-to-git) you'll see that we don't even mention that there are other version control software. It's recommended to stick with Git for now.
 
-There is a small hitch though - Git doesn't always play nice with Windows so if you are on Windows, try use [Git Bash]() which you can choose to install when you install Git.
-
------------ Ubuntu bash for windows???
-
+There is a small hitch though - Git doesn't always play nice with Windows so if you are on Windows, try use Git Bash which you can choose to install when you install Git.
 
 ## Blockchain Tools
 
@@ -53,13 +50,15 @@ The blockchain development landscape is rapidly evolving and new tools are const
 
 ### Web3
 
+Web3 is Ethereum's JavaScript API. It allows webapps to interact with the blockchain. To add this functionality, usually an extension is used like [MetaMask](https://metamask.io/).
 
 ### Local Blockchain
 
-Testing on Ethereum would be very expensive if you had to pay every time you had to update your code. To avoid this problem (and many others introduced by an asynchronous, global database) developers created local blockchains which you can spend all the Eth you want. The recommended choice is [Ganache](), a GUI based Ethereum emulator.
+Testing on Ethereum would be very expensive if you had to pay every time you had to update your code. To avoid this problem (and many others introduced by an asynchronous, global database) developers created local blockchains which you can spend all the Eth you want. The recommended choice is [Ganache](https://truffleframework.com/ganache), a GUI based Ethereum emulator.
 
 ### NodeJS and NPM
 
+NodeJS and NPM are javascript tools that make building JavaScript applications much easier. NPM comes with the NodeJS distribution so [install NodeJS](https://nodejs.org/en/) from their site.
 
 ## Machine Learning Tools
 
@@ -67,21 +66,17 @@ Most cutting edge machine learning is done using Python. Python is an easy to us
 
 ### Get Python
 
-The best way to get python for machine learning is actually not to download it from their site. Rather use a Python package manager called Conda that does a lot of the hard work and nitty gritty of getting things to work. It also comes preinstalled with a lot of the packages that you will need, saving you a lot of time.
+The best way to get python for machine learning is actually not to download it from their site. Rather use a Python package manager called Anaconda that does a lot of the hard work and nitty gritty of getting things to work. It also comes preinstalled with a lot of the packages that you will need, saving you a lot of time.
 
-[Get Conda]()
+[Get Anaconda](https://www.anaconda.com/distribution/)
 
 ### Use Jupyter
 
-After installing Conda, you can use a beautiful interactive "notebook" that can run code and hold notes. From your terminal run `jupyter notebook` to launch Jupyter. This is where you can rapidly prototype ideas using Python. For a longer tutorial on Jupyter, see
-
------ Jupyter lab?????
------ Science labs Jared jupyter
-
+After installing Anaconda, you can use a beautiful interactive "notebook" that can run code and hold notes. From your terminal run `jupyter notebook` to launch Jupyter. This is where you can rapidly prototype ideas using Python. For a longer tutorial on Jupyter, see
 
 ### Install Tensorflow and PyTorch
 
-The most commonly used frameworks for machine learning are [PyTorch]() and [Tensorflow](). We won't get into how to use them in this tutorial or even what they do but you can get a taste by following their tutorials:
+The most commonly used frameworks for machine learning are [PyTorch](https://pytorch.org/) and [Tensorflow](https://www.tensorflow.org/). We won't get into how to use them in this tutorial or even what they do but you can get a taste by following their tutorials:
 
-- [PyTorch Tutorial]()
-- [Tensorflow Tutorial]()
+- [PyTorch Tutorial](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
+- [Tensorflow Tutorial](https://www.tensorflow.org/tutorials)
