@@ -20,13 +20,17 @@ Linear algebra is a core concept in computer science. In general, when we want t
 A vector is a list of numbers.
 
 ```python
+# we will use a useful numerical computation library called numpy
+import numpy as np
+
 # create a numpy vector with 4 elements
 vec1 = np.array([1,2,4,3])
-print("Shape:", vec1.shape)
-print("Vector:", vec1)
 
+print("Shape:", vec1.shape)
 # Shape: (4,)
-# Vector: numpy.ndarray([1,2,4,3])
+
+print("Vector:", vec1)
+# Vector: [1 2 4 3]
 ```
 
 If you want to multiply 2 vectors together and sum the result, you use a dot product. The length of the vectors must be equal.
@@ -36,11 +40,12 @@ vec1 = np.array([1,2,4,3])
 vec2 = np.array([2,2,2,2])
 
 dot_result = np.dot(vec1, vec2)
-print("Shape:", dot_result.shape)
-print("Vector:", dot_result)
 
-# Shape: (1,)
-# Vector: numpy.ndarray([20])
+print("Shape:", dot_result.shape)
+# Shape: ()
+
+print("Vector:", dot_result)
+# Vector: 20
 ```
 
 A matrix is a list of vectors. It has 2 dimensions: a width (how many vectors does it have) and a height (how many elements does it have in each vector).
@@ -50,10 +55,13 @@ mat1 = np.random.randn(4,3) # create a matrix with 4 rows and 3 columns
                             # with random entries
 
 print("Shape:", mat1.shape)
-print("Matrix:", mat1)
-
 # Shape: (4,3)
-# Matrix:
+
+print("Matrix:", mat1)
+# Matrix: [[ 0.87104966 -1.73364794  0.67773974]
+#          [ 0.91154914 -1.59288741  0.59939096]
+#          [ 0.1428397   2.05232364  1.11564538]
+#          [ 0.30141196  1.91262167  0.00888209]]
 ```
 
 Similarly, you can multiply matrices together by applying a dot product to every vector in the matrix. The vectors that are to be multiplied must have the same length. There are several notations in numpy for multiplying matrices together.
@@ -67,9 +75,13 @@ matmul1 = mat1 @ mat2 # The @ operator performs a matrix multiplication in pytho
 matmul2 = np.dot(mat1, mat2) # The np.dot method also performs matrix multiplication
 matmul3 = np.matmul(mat1, mat2) # np.matmul is a specialised operator just for matrices
 
-assert matmul1 == matmul2 == matmul3
-print("Shape:", matmul1.shape, matmul2.shape, matmul3.shape)
+print(np.all(matmul1 == matmul2))
+# True
 
+print(np.all(matmul1 == matmul3))
+# True
+
+print("Shape:", matmul1.shape, matmul2.shape, matmul3.shape)
 # Shape: (4,4) (4,4) (4,4)
 ```
 
@@ -84,7 +96,7 @@ W = np.random.randn(10,2)
 x = np.random.randn(10)
 b = np.ones(2)
 
-y = np.dot(W,x) + b
+y = np.dot(x, W) + b
 print(y.shape)
 # (2,)
 ```
