@@ -87,5 +87,6 @@ The most commonly used frameworks for machine learning are [PyTorch](https://pyt
     <ul>
         <li><a href="https://hackernoon.com/set-up-a-private-ethereum-blockchain-and-deploy-your-first-solidity-smart-contract-on-the-caa8334c343d">Creating your First Smart Contract</a></li>
         <li><a href="https://realpython.com/python-windows-machine-learning-setup/">Python Machine Learning Setup</a></li>
+         <li><a href="https://www.scaler.com/topics/python/">Python Tutorials</a></li>
     </ul>
 </div>
